@@ -1,0 +1,106 @@
+{
+  "references": [
+    [
+      "services",
+      "merchant_id",
+      "merchants",
+      "id"
+    ],
+    [
+      "orders",
+      "service_id",
+      "services",
+      "id"
+    ],
+    [
+      "reviews",
+      "service_id",
+      "services",
+      "id"
+    ],
+    [
+      "disputes",
+      "review_id",
+      "reviews",
+      "id"
+    ]
+  ],
+  "tables": {
+    "merchants": {
+      "id": "str",
+      "category": "str",
+      "capacity_pool": "str",
+      "capacity": "int",
+      "active_from": "str"
+    },
+    "services": {
+      "id": "str",
+      "merchant_id": "str",
+      "customer_id": "str",
+      "category": "str",
+      "state": "str",
+      "promised_at": "str",
+      "fulfilled_at": "NoneType",
+      "invited": "bool",
+      "invitation_probability": "float",
+      "response_probability": "NoneType",
+      "known_at": "str"
+    },
+    "orders": {
+      "id": "str",
+      "service_id": "str",
+      "quantity": "int",
+      "paid_minor": "int",
+      "known_at": "str"
+    },
+    "reviews": {
+      "id": "str",
+      "service_id": "str",
+      "author_id": "str",
+      "stars": "int",
+      "received_at": "str",
+      "known_at": "str"
+    },
+    "disputes": {
+      "id": "str",
+      "review_id": "str",
+      "status": "str",
+      "evidence": "dict",
+      "known_at": "str"
+    },
+    "policies": {
+      "id": "str",
+      "category": "str",
+      "minimum_observation": "int",
+      "risk_limit": "float",
+      "period_capacity": "int"
+    },
+    "capacity_pools": {
+      "id": "str",
+      "period_capacity": "int"
+    },
+    "committed_load": {
+      "id": "str",
+      "capacity_pool": "str",
+      "load": "int",
+      "period_start": "str",
+      "period_end": "str"
+    },
+    "allocations": {
+      "id": "str",
+      "merchant_id": "str",
+      "opportunities": "int",
+      "accepted_load": "int",
+      "executed": "int",
+      "period_start": "str",
+      "period_end": "str",
+      "confirmed_at": "str"
+    },
+    "actual_exposures": {
+      "id": "str",
+      "allocation_id": "str",
+      "opportunities": "int",
+      "occurred_at": "str"
+    }
+  }
+}

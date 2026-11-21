@@ -1,0 +1,27 @@
+{
+  "synthetic": true,
+  "timezone": "UTC",
+  "tables": {
+    "disputes": [
+      {
+        "id": "dispute11-decision",
+        "revises": "dispute11",
+        "review_id": "review11",
+        "status": "accepted",
+        "evidence": {
+          "merchant_responsible": false,
+          "provider_responsible": true
+        },
+        "known_at": "2026-07-01T10:00:00+00:00"
+      }
+    ],
+    "capacity_pools": [
+      {
+        "id": "point0-new",
+        "revises": "point0",
+        "period_capacity": 45,
+        "known_at": "2026-06-30T12:00:00+00:00"
+      }
+    ]
+  }
+}
